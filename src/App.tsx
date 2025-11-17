@@ -105,7 +105,7 @@ export default function PortfolioLanding() {
 
         <section className="border-y border-slate-800/60 bg-slate-900/20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-sm text-slate-300">
-            {["Seoul Arts", "Navy", "XR Lab", "Festival"].map((l) => (
+            {["Media Art", "Media Performance", "New Form Art", "Game"].map((l) => (
               <div key={l} className="opacity-80 hover:opacity-100 transition">{l}</div>
             ))}
           </div>
@@ -194,17 +194,12 @@ function Header() {
     <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-[#06080f]/80 border-b border-slate-800/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Logo />
-          <span className="font-semibold tracking-tight">HSJ Studio</span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
           <a className="hover:text-white" href="#works">Works</a>
           <a className="hover:text-white" href="#about">About</a>
           <a className="hover:text-white" href="#contact">Contact</a>
         </nav>
-        <div className="flex items-center gap-3">
-          <a href="#contact" className="px-3 py-2 text-sm rounded-xl bg-blue-600 hover:bg-blue-500">Contact me</a>
-        </div>
       </div>
     </header>
   );
