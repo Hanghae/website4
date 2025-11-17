@@ -66,7 +66,7 @@ export default function PortfolioLanding() {
               <div className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
               Interactive Media Artist
             </div>
-            <h1 className="text-3xl sm:text-5xl font-bold leading-[1.1] tracking-tight">Media artist / Hwang Su Jong</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold leading-[1.1] tracking-tight">Hwang Su Jong</h1>
             <p className="mt-4 text-slate-300 leading-relaxed max-w-xl">
               I create immersive, reactive installations that combine light, sound, and motion.
             </p>
