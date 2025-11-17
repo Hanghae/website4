@@ -99,7 +99,7 @@ export default function PortfolioLanding() {
                 <span className="text-xs text-slate-300">00:06 loop</span>
               </div>
             </div>
-            <p className="mt-3 text-xs text-slate-400">1080p WebM · captions ready · seamless loop</p>
+            <p className="mt-3 text-xs text-slate-400"></p>
           </div>
         </section>
 
