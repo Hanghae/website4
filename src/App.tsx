@@ -203,7 +203,7 @@ function Header() {
           <a className="hover:text-white" href="#contact">Contact</a>
         </nav>
         <div className="flex items-center gap-3">
-          <a href="#contact" className="px-3 py-2 text-sm rounded-xl bg-blue-600 hover:bg-blue-500">Hire me</a>
+          <a href="#contact" className="px-3 py-2 text-sm rounded-xl bg-blue-600 hover:bg-blue-500">Contact me</a>
         </div>
       </div>
     </header>
