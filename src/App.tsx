@@ -89,9 +89,13 @@ export default function PortfolioLanding() {
                 loop
                 playsInline
                 preload="metadata"
-                poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><rect width='1200' height='675' fill='%230b1020'/><text x='50%' y='52%' dominant-baseline='middle' text-anchor='middle' fill='%2396a0b5' font-size='20'>Loop preview</text></svg>"
-                src=""
-              />
+                poster="data:image/svg+xml;utf8,<svg ...>Loop preview</text></svg>"
+              >
+                {/* WebM이 있으면 우선 사용, 없으면 MP4로 재생 */}
+                <source src="/hero.webm" type="video/webm" />
+                <source src="/hero.mp4"  type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-950/80 to-transparent flex items-center gap-3">
                 <div className="h-1 w-full rounded bg-slate-700">
                   <div className="h-1 w-1/3 rounded bg-blue-500" />
