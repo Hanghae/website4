@@ -68,16 +68,29 @@ export default function PortfolioLanding() {
             </div>
             <h1 className="text-3xl sm:text-5xl font-bold leading-[1.1] tracking-tight">Hwang Su Jong</h1>
             <p className="mt-4 text-slate-300 leading-relaxed max-w-xl">
-              I create immersive, reactive installations that combine light, sound, and motion.
+              빛, 소리, 그리고 움직임을 결합한 전반적인 인터랙티브 콘텐츠를 기획하고 개발합니다
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a href="#works" className="inline-flex items-center justify-center rounded-xl bg-white text-slate-900 px-4 py-3 font-medium hover:bg-slate-100">View Works</a>
               <a href="#contact" className="inline-flex items-center justify-center rounded-xl border border-slate-700 px-4 py-3 font-medium hover:bg-slate-800">Contact</a>
             </div>
             <div className="mt-4 flex items-center gap-4 text-sm text-slate-400">
-              <a href="#" aria-label="Instagram" className="hover:text-white">Instagram</a>
-              <a href="#" aria-label="YouTube" className="hover:text-white">YouTube</a>
+              <ExternalLink
+                href="https://www.instagram.com/hwangsujong82/"
+                className="hover:text-white"
+                ariaLabel="Instagram (opens in a new tab)"
+              >
+                Instagram
+              </ExternalLink>
+              <ExternalLink
+                href="https://www.youtube.com/@Hanghae_4"
+                className="hover:text-white"
+                ariaLabel="YouTube (opens in a new tab)"
+              >
+                YouTube
+              </ExternalLink>
             </div>
+
           </div>
 
           <div className="relative">
@@ -96,6 +109,7 @@ export default function PortfolioLanding() {
                 <source src="/hero.mp4"  type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-950/80 to-transparent flex items-center gap-3">
                 <div className="h-1 w-full rounded bg-slate-700">
                   <div className="h-1 w-1/3 rounded bg-blue-500" />
@@ -308,4 +322,32 @@ function GradientBG() {
 function prefersMotion() {
   if (typeof window === "undefined") return false;
   return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function ExternalLink({
+  href,
+  children,
+  className,
+  ariaLabel,
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
+}) {
+  return (
+    <a
+      href={href}
+      className={className}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      onClick={(e) => {
+        e.preventDefault();
+        window.open(href, "_blank", "noopener,noreferrer");
+      }}
+    >
+      {children}
+    </a>
+  );
 }
